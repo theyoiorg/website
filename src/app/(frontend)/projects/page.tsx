@@ -4,7 +4,7 @@ import projects from './projects.json'
 
 export default function Home() {
   return (
-    <div className="flex w-full flex-col bg-yoi-white dark:bg-yoi-black">
+    <div className="flex w-full flex-col bg-background">
       <main className="z-1 flex-1">
         <Banner
           bg="/heroes/cloth_fish.png"

@@ -259,6 +259,27 @@
   }
 }
 
+/* YOI theme-aware color aliases */
+/* In light mode: white bg, dark text, light blue header */
+/* In dark mode: dark bg, white text, dark navy header */
+:root {
+  --yoi-bg: #ffffff;
+  --yoi-fg: #0a0a0a;
+  --yoi-header-from: #bfdbfe; /* yoi-blue-4 */
+  --yoi-header-sheet: #0a0a0a;
+  --yoi-header-sheet-fg: #ffffff;
+  --yoi-accent: #1a56db; /* yoi-blue-2 */
+}
+
+[data-theme='dark'] {
+  --yoi-bg: #0a0a0a;
+  --yoi-fg: #ffffff;
+  --yoi-header-from: #04328d; /* yoi-blue-1 */
+  --yoi-header-sheet: #0a0a0a;
+  --yoi-header-sheet-fg: #ffffff;
+  --yoi-accent: #bfdbfe; /* yoi-blue-4 */
+}
+
 html {
   opacity: 0;
 }

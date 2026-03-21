@@ -3,6 +3,7 @@ const config = {
   theme: {
     extend: {
       colors: {
+        // Static YOI palette
         "yoi-blue-1": "#04328d",
         "yoi-blue-2": "#1a56db",
         "yoi-blue-3": "#3b82f6",
@@ -10,6 +11,11 @@ const config = {
         "yoi-blue-5": "#dbeafe",
         "yoi-white": "#ffffff",
         "yoi-black": "#0a0a0a",
+        // Theme-aware aliases (respond to data-theme switching)
+        "yoi-bg": "var(--yoi-bg)",
+        "yoi-fg": "var(--yoi-fg)",
+        "yoi-header-from": "var(--yoi-header-from)",
+        "yoi-accent": "var(--yoi-accent)",
       },
       typography: () => ({
         DEFAULT: {

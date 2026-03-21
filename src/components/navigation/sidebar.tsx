@@ -46,13 +46,13 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
   return (
     <header
       className={
-        'h-58 flex w-screen items-center bg-gradient-to-b from-yoi-blue-4 from-30% to-transparent to-75% px-4 py-4 pb-8 dark:from-yoi-blue-1 lg:px-6' +
+        'flex w-screen items-center bg-gradient-to-b from-yoi-header-from from-30% to-transparent to-75% px-4 py-4 pb-8 lg:px-6' +
         (className ? ' ' + className : '')
       }
     >
       <Link className="flex flex-none items-center justify-center gap-2" href="/">
-        <div className="logo h-50 w-50">
-          <Image src="/yoi_logo.png" className="h-50 w-50" alt="YOI Logo" width={50} height={50} />
+        <div className="">
+          <Image src="/yoi_logo.png"  alt="YOI Logo" width={50} height={50} />
           <span className="sr-only">The Youth Oceanic Initiative</span>
         </div>
         <div className="text-m leading-4">
@@ -74,10 +74,10 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
         <SheetContent className="w-72 bg-yoi-black text-yoi-white" side="right">
           <div className="flex h-20 items-center justify-between border-b border-gray-700 px-0">
             <Link className="flex flex-none items-center justify-center gap-2" href="#">
-              <div className="logo h-50 w-50">
+              <div className="">
                 <Image
                   src="/yoi_logo.png"
-                  className="h-50 w-50"
+                  
                   alt="YOI Logo"
                   width={50}
                   height={50}
@@ -120,7 +120,7 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="default" className="w-full">
-                <div className="flex gap-3 px-4 text-yoi-black dark:text-yoi-white">
+                <div className="flex gap-3 px-4 text-foreground">
                   <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                   <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                   <span>Toggle theme</span>

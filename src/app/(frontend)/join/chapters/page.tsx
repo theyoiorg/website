@@ -78,12 +78,12 @@ export default function Home() {
   }, [zoom])
 
   return (
-    <div className="flex w-full flex-col bg-yoi-white dark:bg-yoi-black">
+    <div className="flex w-full flex-col bg-background">
       <main className="z-1 flex flex-col">
         <section className="h-screen w-full pb-12 md:pb-24 lg:pb-32">
           <div id="map-container" className="h-screen w-full" />
         </section>
-        <div className="z-2 bg-radial-ellipse-tl absolute from-yoi-blue-4 from-25% to-transparent pl-6 pr-6 pt-20 dark:from-yoi-blue-1 sm:pt-28">
+        <div className="z-2 bg-radial-ellipse-tl absolute from-yoi-header-from from-25% to-transparent pl-6 pr-6 pt-20  sm:pt-28">
           <h1 className="fancy text-4xl sm:text-5xl md:text-6xl lg:text-7xl/none">
             Find A Chapter
           </h1>

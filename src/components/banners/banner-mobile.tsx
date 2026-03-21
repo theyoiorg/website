@@ -30,10 +30,10 @@ const BannerMobile: React.FC<BannerMobileProps> = ({
         className,
       )}
     >
-      <div className="bg-yoi-blue-4 dark:bg-yoi-blue-1">
+      <div className="bg-yoi-header-from">
         <div className="justify-top container flex h-max w-screen flex-1 flex-col items-center space-y-4 pb-10 pt-8 text-center">
           <div className="relative w-screen">
-            <div className="absolute inset-0 rounded-t-xl bg-gradient-to-b from-transparent from-80% to-yoi-blue-4 dark:to-yoi-blue-1" />
+            <div className="absolute inset-0 rounded-t-xl bg-gradient-to-b from-transparent from-80% to-yoi-header-from" />
             <Image
               alt="Hero"
               className="mx-auto aspect-[2/1] overflow-hidden object-cover"
