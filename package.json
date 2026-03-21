@@ -1,6 +1,6 @@
 {
-  "name": "yoi-website-2",
-  "version": "1.0.0",
+  "name": "website",
+  "version": "2.0.0",
   "description": "Website template for Payload",
   "license": "MIT",
   "type": "module",
