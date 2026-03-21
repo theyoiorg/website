@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "build": "cross-env NODE_OPTIONS=--no-deprecation payload migrate && cross-env NODE_OPTIONS=--no-deprecation next build",
     "postbuild": "next-sitemap --config next-sitemap.config.cjs",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
     "dev:prod": "cross-env NODE_OPTIONS=--no-deprecation rm -rf .next && bun build && bun start",
@@ -32,6 +32,7 @@
     "@payloadcms/plugin-search": "3.80.0",
     "@payloadcms/plugin-seo": "3.80.0",
     "@payloadcms/richtext-lexical": "3.80.0",
+    "@payloadcms/storage-vercel-blob": "^3.80.0",
     "@payloadcms/ui": "3.80.0",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-avatar": "^1.1.11",
