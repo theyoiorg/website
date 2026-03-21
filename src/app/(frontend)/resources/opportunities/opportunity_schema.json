@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft/2020-12/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "title": { "type": "string" },
+      "posted": { "type": "string", "format": "date" },
+      "deadline": { "type": "string", "format": "date" },
+      "location": { "type": "string" },
+      "description": { "type": "string" },
+      "provider": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "image": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        },
+        "required": ["name", "image", "url"]
+      },
+      "link": { "type": "string", "format": "uri" },
+      "availability": {
+        "type": "object",
+        "properties": {
+          "allAges": { "type": "boolean" },
+          "min": { "type": "integer" },
+          "max": { "type": "integer" },
+          "open": { "type": "boolean" }
+        },
+        "required": ["allAges", "min", "max", "open"]
+      },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "requirements": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "required": [
+      "title",
+      "posted",
+      "deadline",
+      "location",
+      "description",
+      "provider",
+      "link",
+      "availability",
+      "tags",
+      "requirements"
+    ]
+  }
+}

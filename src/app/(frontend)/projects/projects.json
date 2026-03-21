@@ -1,0 +1,38 @@
+[
+  {
+    "title": "World Ocean Day 2024 Zine",
+    "description": "See artworks and writings submitted by youth around the world for World Ocean Day 2024.",
+    "type": "zine",
+    "status": "completed",
+    "image": "/projects/WOD2024-thumb.png",
+    "link": "/projects/WOD2024",
+    "tags": ["art", "writing"]
+  },
+  {
+    "title": "Save The Hudson Canyon",
+    "description": "Sign our petition to ensure the Hudson Canyon's designation as a marine sanctuary.",
+    "type": "petition",
+    "status": "active",
+    "image": "/projects/hudson_canyon.jpg",
+    "link": "https://www.change.org/p/save-the-hudson-canyon-ensure-its-designation-as-a-marine-sanctuary",
+    "tags": ["petition", "marine sanctuary", "ongoing"]
+  },
+  {
+    "title": "Fight Overfishing",
+    "description": "YOI collaborated with Smaller Nets Happier Oceans (SNHO) to combat overfishing, sign the petition here!",
+    "type": "petition",
+    "status": "active",
+    "image": "/projects/fight_overfishing.jpg",
+    "link": "https://www.change.org/p/fight-overfishing-set-a-national-limit-on-industrial-fishing-nets",
+    "tags": ["petition", "overfishing", "ongoing"]
+  },
+  {
+    "title": "The Maritime Logs",
+    "description": "Read the entries from our monthly newsletter, The Maritime Logs.",
+    "type": "newsletter",
+    "status": "active",
+    "image": "/projects/the-maritime-logs-thumb.png",
+    "link": "/projects/the-maritime-logs",
+    "tags": ["newsletter", "ongoing"]
+  }
+]

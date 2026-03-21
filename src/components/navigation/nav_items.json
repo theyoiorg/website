@@ -1,0 +1,76 @@
+[
+  {
+    "category": "About Us",
+    "root": "/about",
+    "links": [
+      {
+        "title": "Our Mission",
+        "href": "/about/mission",
+        "description": "Learn more about our mission and vision."
+      },
+      {
+        "title": "Our Team",
+        "href": "/about/team",
+        "description": "Meet the team behind the Youth Oceanic Initiative."
+      }
+    ]
+  },
+  {
+    "category": "Get Involved",
+    "root": "/join",
+    "links": [
+      {
+        "title": "Join Us",
+        "href": "/join/yoi",
+        "description": "Join our team and help make a difference in the world."
+      },
+      {
+        "title": "Find a Chapter",
+        "href": "/join/chapters",
+        "description": "Find a local YOI chapter near you."
+      },
+      {
+        "title": "Start a Chapter",
+        "href": "/join/chapters/new",
+        "description": "Apply to start a YOI chapter in your area."
+      },
+      {
+        "title": "Participate in an Event",
+        "href": "/join/events",
+        "description": "Join us at an upcoming event or look at past events."
+      }
+    ]
+  },
+  {
+    "category": "Our Projects",
+    "root": "/projects",
+    "links": [
+      {
+        "title": "World Ocean Day 2024 Zine",
+        "href": "/projects/WOD2024",
+        "description": "See artworks and writings submitted by youth around the world for World Ocean Day 2024."
+      },
+      {
+        "title": "The Maritime Logs",
+        "href": "/projects/the-maritime-logs",
+        "description": "Read the entries from our monthly newsletter, The Maritime Logs."
+      },
+      {
+        "title": "All Projects",
+        "href": "/projects",
+        "description": "View all of our projects and learn how you can get involved."
+      }
+    ]
+  },
+  {
+    "category": "Opportunities",
+    "root": "/resources",
+    "links": [
+      {
+        "title": "Opportunities Database",
+        "href": "/resources/opportunities",
+        "description": "Find opportunities to get involved in ocean conservation."
+      }
+    ]
+  }
+]

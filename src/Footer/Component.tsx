@@ -4,9 +4,7 @@ import React from 'react'
 
 import type { Footer } from '@/payload-types'
 
-import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 import { CMSLink } from '@/components/Link'
-import { Logo } from '@/components/Logo/Logo'
 
 export async function Footer() {
   const footerData: Footer = await getCachedGlobal('footer', 1)()
@@ -14,21 +12,44 @@ export async function Footer() {
   const navItems = footerData?.navItems || []
 
   return (
-    <footer className="mt-auto border-t border-border bg-black dark:bg-card text-white">
-      <div className="container py-8 gap-8 flex flex-col md:flex-row md:justify-between">
-        <Link className="flex items-center" href="/">
-          <Logo />
-        </Link>
-
-        <div className="flex flex-col-reverse items-start md:flex-row gap-4 md:items-center">
-          <ThemeSelector />
-          <nav className="flex flex-col md:flex-row gap-4">
-            {navItems.map(({ link }, i) => {
-              return <CMSLink className="text-white" key={i} {...link} />
-            })}
-          </nav>
-        </div>
-      </div>
+    <footer className="flex w-full shrink-0 flex-col items-center gap-2 border-t px-4 py-6 sm:flex-row md:px-6">
+      <p className="text-center text-xs text-gray-500 dark:text-gray-400">
+        © 2024 The Youth Oceanic Initiative. All rights reserved.
+      </p>
+      <nav className="flex gap-2 sm:ml-auto sm:gap-6">
+        {navItems.length > 0 ? (
+          navItems.map(({ link }, i) => (
+            <CMSLink key={i} {...link} className="text-xs underline-offset-4 hover:underline" />
+          ))
+        ) : (
+          <>
+            <Link
+              className="text-xs underline-offset-4 hover:underline"
+              href="https://www.instagram.com/youth_oceanic_initiative/"
+            >
+              Instagram
+            </Link>
+            <Link
+              className="text-xs underline-offset-4 hover:underline"
+              href="https://www.tiktok.com/@youthoceanicinitiative"
+            >
+              TikTok
+            </Link>
+            <Link
+              className="text-xs underline-offset-4 hover:underline"
+              href="mailto:hello@theyoi.org"
+            >
+              Email
+            </Link>
+            <Link
+              className="text-xs underline-offset-4 hover:underline"
+              href="mailto:webmaster@theyoi.org?subject=YOI%20Website%20Issue"
+            >
+              Website Problems?
+            </Link>
+          </>
+        )}
+      </nav>
     </footer>
   )
 }

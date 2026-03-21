@@ -1,0 +1,26 @@
+[
+  {
+    "image": "/projects/ocg-saving-the-ocean-xch7jXAaqqo-unsplash.jpg",
+    "title": "Find Opportunities",
+    "description": "Look through our curated opportunity database to find an event or opportunity being hosted by us or our partners organizations. We have a variety of opportunities for all ages and skill levels.",
+    "link": "/resources/opportunities",
+    "buttonText": "Find an Opportunity",
+    "imageLeft": false
+  },
+  {
+    "image": "/projects/pin-adventure-map-SJvNVEcU5Rc-unsplash.jpg",
+    "title": "Join A Chapter",
+    "description": "Are you a student? Join a chapter at your school or start one! We have chapters throughout the US and are always looking for new members to join our mission.",
+    "link": "/join/chapters",
+    "buttonText": "Find a Chapter",
+    "imageLeft": true
+  },
+  {
+    "image": "/projects/windows-p74ndnYWRY4-unsplash.jpg",
+    "title": "Join the YOI Team",
+    "description": "Join our team of volunteers and help us make a difference. We have a variety of opportunities for all ages and skill levels.",
+    "link": "/join/yoi",
+    "buttonText": "Coming Soon",
+    "imageLeft": false
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "title": "ART FOR OCEANS: Youth Art Show",
+    "posted": "04-24-2024",
+    "deadline": "05-01-2024",
+    "location": "Upper West Side, Manhattan, NYC",
+    "description": "Are you a youth artist with a passion for ocean conservation? We are currently accepting submissions for ART FOR OCEANS, a youth art show that will be exhibited in June 2024 at Wild Geese Gallery in Upper West Side, Manhattan, NYC. This is a NOAA Ocean Guardian Youth Ambassador Community Event.",
+    "provider": {
+      "name": "NOAA Ocean Guardian Youth Ambassador Hayden Almeraz",
+      "image": "/hetllo.png",
+      "url": "/opportunities/hayden_almeraz.jpg"
+    },
+    "link": "https://www.wildgeesegallery.com/art-of-the-o",
+    "availability": { "allAges": true, "min": "True", "max": 12, "open": true },
+    "tags": ["True"],
+    "requirements": ["art", "ocean conservation", "youth", "NYC"]
+  },
+  {
+    "title": "Marine Art Contest for Grades K-12",
+    "posted": "04-24-2024",
+    "deadline": "05-10-2024",
+    "location": "Online",
+    "description": "Students are invited to enter the free 2024 Marine Art Contest. The theme is 'Exploring The Biological Diversity of Stellwagen Bank National Marine Sanctuary.' The art can depict one or more representative species, show a predator-prey relationship, or illustrate diverse species in a sanctuary habitat.",
+    "provider": {
+      "name": "Stellwagen Bank National Marine Sanctuary",
+      "image": "/hetllo.png",
+      "url": "/opportunities/stellwagen_bank.jpg"
+    },
+    "link": "https://stellwagen.noaa.gov/",
+    "availability": { "allAges": true, "min": "True", "max": 5, "open": true },
+    "tags": ["True"],
+    "requirements": ["art", "marine biology", "K-12", "online"]
+  },
+  {
+    "title": "YE4C Ripple Effect: Make Waves \nfor Water Awareness Contest",
+    "posted": "04-24-2024",
+    "deadline": "05-12-2024",
+    "location": "Online",
+    "description": "Create an original piece of content (video, artwork, photography, or written) that highlights the importance of water in our communities or showcases potential careers in the field. No copyrighted or AI-generated submissions will be accepted. Three winners will be selected to receive $100 gift cards.",
+    "provider": {
+      "name": "Youth Engaged 4 Change",
+      "image": "/hetllo.png",
+      "url": "/ye4c.png"
+    },
+    "link": "https://instagram.com/youthengaged4change",
+    "availability": {
+      "allAges": true,
+      "min": "False",
+      "max": 13,
+      "open": true
+    },
+    "tags": ["False"],
+    "requirements": ["water", "ye4c"]
+  },
+  {
+    "title": "Atlantic Marine Conservation\n Society Volunteering",
+    "posted": "04-24-2024",
+    "deadline": "05-12-2099",
+    "location": "New York",
+    "description": "AMCS' goal is to work in the communities of New York to better combat the issues challenging our environment. Volunteers can help in beach monitoring, fundraising/marketing, and volunteer program management. Volunteers may also work in Excel data analysis, grant writing, IT, etc.\\n\\nNote: Only volunteers aged 18+ can engage in hands-on contact with animals.",
+    "provider": {
+      "name": "Alantic Marine Conservation Society",
+      "image": "/hetllo.png",
+      "url": "/amcs.png"
+    },
+    "link": "https://amseas.org",
+    "availability": {
+      "allAges": true,
+      "min": "False",
+      "max": 12,
+      "open": true
+    },
+    "tags": ["True"],
+    "requirements": ["water", "ye4c"]
+  },
+  {
+    "title": "National Weather Service \nVirtual School Talks",
+    "posted": "04-24-2024",
+    "deadline": "05-12-2099",
+    "location": "Online",
+    "description": "The National Weather Service (NWS) National School Outreach team is ready to teach and answer your students' weather questions. The NWS, through Google Meet, Zoom, or Skype, jumps into the classroom to help teach these topics to elementary through high school students.",
+    "provider": {
+      "name": "National Weather Service",
+      "image": "/hetllo.png",
+      "url": "/nws.png"
+    },
+    "link": "https://weather.gov",
+    "availability": { "allAges": true, "min": "True", "max": 0, "open": true },
+    "tags": ["True"],
+    "requirements": ["water", "ye4c"]
+  }
+]

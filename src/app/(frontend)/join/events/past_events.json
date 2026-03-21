@@ -1,0 +1,60 @@
+[
+  {
+    "title": "",
+    "image": "",
+    "location": "",
+    "date": "",
+    "description": "",
+    "link": "",
+    "buttonText": ""
+  },
+  {
+    "title": "YOI x Marine Conservation Network Poster Contest",
+    "image": "/events/shaun-low-v8Un2Roo1Ak-unsplash.jpg",
+    "location": "Online",
+    "date": "09-30-2024",
+    "description": "Are you a young artist passionate about the ocean? Submit to the YOI x MCN Poster Contest now! The theme is MCN's slogan, “Together, We Make Oceans of Difference.” Create a poster that demonstrates how community action - big or small - in ocean advocacy/conservation can lead to positive change. Artists can submit a maximum of two unique designs.",
+    "link": "https://forms.gle/6ZVzwBqqJq7zpizp6",
+    "buttonText": "Submit Now!"
+  },
+  {
+    "title": "Marine Sustainability In Media Workshop",
+    "image": "/events/marine_sustainability.jpg",
+    "location": "Online",
+    "date": "08-21-2024",
+    "description": "The YOI is hosting a workshop on how media is used to promote eco-friendly behaviors and how each individual can use online resources to encourage marine sustainability in their own communities.",
+    "link": "https://forms.gle/x6EguoXNhm5TjnjB9"
+  },
+  {
+    "title": "YOI Ocean Activism Workshop",
+    "image": "/events/Greenpeace Pacific Ocean Protest.jpg",
+    "location": "Online",
+    "date": "07-27-2024",
+    "description": "The YOI hosted an Ocean Activism Workshop to empower students to take action on ocean conservation issues. The workshop featured panelists from various environmental organizations, who shared their experiences and insights on effective activism strategies. Participants learned about the importance of advocacy, community engagement, and policy change in protecting the ocean and its marine life. The workshop also included interactive activities to help students strengthen their advocacy skills and develop their own innovative solutions for addressing ocean conservation challenges.",
+    "link": "https://forms.gle/hVaFoYV61DXd9EF9A"
+  },
+  {
+    "title": "Art for Earth Panel",
+    "image": "/events/nick-fewings-3oUnLE6qC-U-unsplash.jpg",
+    "location": "Online",
+    "date": "07-01-2024",
+    "description": "In collaboration with Ocean Busters and Paperwave, YOI hosted a panel discussion on the role of art in environmental activism.\n\nIn the face of escalating environmental crises, from climate change to biodiversity loss, the need for innovative and impact solutions has never been more urgent. This panel brings together a diverse group of artists, environmentalists, and thought leaders to explore how different art forms can address pressing environmental issues, inspire action, and foster a deeper connection with the natural world!",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSeFPJBXri48_KV1fOu_-CGV1bhahae_zx491JYoju2UMwJ24g/viewform"
+  },
+  {
+    "title": "Nautilus Live Ship-To-Shore Interaction",
+    "image": "/events/nautilus-hires.jpg",
+    "location": "BTHS YOI",
+    "date": "06-13-2024",
+    "description": "The BTHS YOI chapter hosted a live ship-to-shore interaction with the Nautilus, a research vessel operated by the Ocean Exploration Trust. Students had the opportunity to speak with scientists and engineers on board the Nautilus, learn about the latest discoveries in ocean exploration, and ask questions about careers in marine science.",
+    "link": "https://forms.gle/xq4wMrh5Kk91AXJv5"
+  },
+  {
+    "title": "YOI World Ocean Day 2024 Zine Webinar",
+    "image": "/events/WOD2024-thumb.png",
+    "location": "Online",
+    "date": "06-08-2024",
+    "description": "In celebration of World Ocean Day 2024, YOI hosted a webinar to showcase a zine compiled by the YOI team based on a contest hosted earlier. The zine featured over 25 artworks and poems from students around the world, all centered around the theme of ocean conservation and sustainability. The webinar included a panel discussion with the zine contributors, as well as a Q&A session with the audience. At the end of the event, two winners were announced to receive a special monetary prize for their contributions.",
+    "link": "https://forms.gle/z6YcZnt4mJ7iN9rt9"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "department": "Cabinet Board",
+    "people": [
+      {
+        "name": "Marlin Xie",
+        "role": "Founder & President",
+        "pronouns": "He/Him",
+        "image": "/crew/marlin.jpg",
+        "description": "Marlin is a high school senior in New York passionate about protecting the environment, especially the ocean. He is a current NOAA Ocean Guardian Youth Ambassador and an EarthEcho International Marine Plastics Ambassador, and has previously worked with other environmental nonprofit organizations. YOI was founded by him to continue advocating for the ocean past a school club he created that was dedicated to a similar mission and into the greater world."
+      },
+      {
+        "name": "Ankur Parikh",
+        "role": "Vice President of Research",
+        "pronouns": "He/Him",
+        "image": "/crew/ankur.jpg",
+        "description": "Ankur is a high school junior in Southern California who has a strong passion for the environment. He participates in different programs including Cool Irvine and is a NOAA Ocean Guardian Youth Ambassador. He is excited to work with YOI and continue helping protect the natural beauty of our oceans and our planet."
+      },
+      {
+        "name": "Grace Corveleyn",
+        "role": "Vice President of Comms.",
+        "pronouns": "She/Her",
+        "image": "/crew/grace.jpg",
+        "description": "Grace is a high school junior living in New Jersey. Currently, she serves as a high school ambassador for The Climate Initiative and as a NOAA Ocean Guardian Ambassador. She hopes that working with YOI will help her to spread her message of advocacy and awareness towards plastic pollution reduction and marine biodiversity management."
+      },
+      {
+        "name": "Angela Liu",
+        "role": "Vice President of Content",
+        "pronouns": "She/Her",
+        "image": "/crew/angela.jpg",
+        "description": "Angela is a high school senior in New York who is excited to further contribute to the amazing climate and environmental initiatives that exist to protect our Earth, and specifically our Earth's oceans. She is currently volunteering for the Wildlife Conservation Society at the New York Aquarium, assisting in educational programs and inspiring people to value nature. She is eager to join a team of other passionate individuals and enable others to take initiative for the causes that they care about."
+      },
+      {
+        "name": "Lucine Husain",
+        "role": "Secretary",
+        "pronouns": "Any Pronouns",
+        "image": "/crew/lucine.jpg",
+        "description": "Lucine, a high school junior in New York, is passionate about environmental advocacy. He has worked with Our Climate, and hopes to use his knowledge and skills to further his involvement with the environment. He is thrilled to further YOI's mission and continue advocating for oceans."
+      },
+      {
+        "name": "Sydney Deb",
+        "role": "Treasurer",
+        "pronouns": "She/Her",
+        "image": "/crew/sydney.jpg",
+        "description": "Sydney is a current senior from New York hoping to pursue biotechnology in the future. She is passionate about making a difference in the world and her community and loves combining her love for art with that of creative conservation. She's very excited to work with YOI to spread its mission for marine advocacy and education!"
+      },
+      {
+        "name": "Issac Liu",
+        "role": "Webmaster",
+        "pronouns": "He/Him",
+        "image": "/crew/issac.jpg",
+        "description": "Issac is a high school junior in New York City who wants to leave an impact on the world. Through YOI, he hopes to gain more knowledge regarding the environmental issues that our waters are facing and the solutions to solve them. He's excited to help contribute to YOI's mission."
+      }
+    ]
+  },
+  {
+    "department": "Research Department",
+    "people": [
+      {
+        "name": "Madelyn Carrera",
+        "role": "Policy Research Director",
+        "pronouns": "She/Her",
+        "image": "/crew/madelyn.jpg",
+        "description": "Madelyn is a senior in a New York City high school who is incredibly passionate about marine science. She is currently volunteering for the Wildlife Conservation Society at the New York Aquarium, and she is also part of the NOAA Ocean Guardian Youth Ambassador program. She is excited to be part of YOI and help advocate for our oceans."
+      },
+      {
+        "name": "Winston Kan",
+        "role": "Policy Research Director",
+        "pronouns": "He/Him",
+        "image": "/crew/winston.jpg",
+        "description": "Winston is a senior from New York passionate about advocating for environmental policy. Although he is new to marine advocacy, he has history with volunteering and hopes to spread information about ocean policies. He is excited to work with the YOI team, and hopes to learn new things from everyone."
+      },
+      {
+        "name": "Maya Aryanfar",
+        "role": "Scientific Research Director",
+        "pronouns": "She/Her",
+        "image": "/crew/maya.jpg",
+        "description": "Maya is a high school senior in California passionate about marine advocacy. She is pursuing aquatic and biological research. Additionally, she is a Youth Ambassador for the National Oceanic and Atmospheric Association (NOAA). By working with YOI, she hopes to expand access to scientific research nationwide."
+      },
+      {
+        "name": "Fatemtuz Zuhura",
+        "role": "Scientific Research Director",
+        "pronouns": "She/Her",
+        "image": "/crew/fatemtuz.jpg",
+        "description": "Fatemtuz is a high school senior in the state of New York passionate about creating a difference in the world. Although she doesn't have much experience working with ocean advocacy and education, she's determined to make the most of working with YOI to improve her skillsets and work with many influential organizations unanimously focused on bettering our seas."
+      }
+    ]
+  },
+  {
+    "department": "Communications Department",
+    "people": [
+      {
+        "name": "Emerson Lee",
+        "role": "Marketing & Outreach Director",
+        "pronouns": "She/Her",
+        "image": "/crew/emerson.jpg",
+        "description": "Emerson, a high school senior in New York City, is passionate about advocating for environmental conservation. She recently participated in a program called GLA, where she was able to travel to Costa Rica to learn about marine conservation and strategies to help sea turtles. She's excited to expand her knowledge on conservation with other programs in the future and looks forward to working with YOI to advocate for and educate others about the ocean."
+      },
+      {
+        "name": "Ryan Kuang",
+        "role": "Marketing & Outreach Director",
+        "pronouns": "He/Him",
+        "image": "/crew/ryan.jpg",
+        "description": "Ryan is a highschool senior in New York who is eager to raise environmental awareness, especially with ocean related problems. Although he is new to marine advocacy, he has experience working with his school's oceanic club. He hopes to learn more about the ocean and how to better protect it."
+      },
+      {
+        "name": "Janssen Gallenero",
+        "role": "Social Media Director",
+        "pronouns": "She/Her",
+        "image": "/crew/janssen.jpg",
+        "description": "Janssen is currently a junior attending a high school in New York City. Passionate about environmental science, she joined her school's Science Olympiad environmental science division. Although she does not have much experience in marine science and advocacy, she hopes by joining YOI that she will learn more about marine life while contributing to YOI's mission."
+      },
+      {
+        "name": "Veronica Tom",
+        "role": "Social Media Director",
+        "pronouns": "She/Her",
+        "image": "/crew/veronica.jpg",
+        "description": "Veronica is interested in environmental causes, particularly those related to the ocean. Although she has limited experience in this area, she hopes to expand her understanding of the ocean knowledge, and build her communication skills by working with YOI! Growing up in a beach community, she has seen firsthand the unfortunate effects of plastic pollution on the ocean and beaches and is passionate about addressing this issue. Her favorite marine animals are sea turtles and the dumbo octopuses!"
+      },
+      {
+        "name": "Sandy Phan",
+        "role": "Social Media Director",
+        "pronouns": "She/Her",
+        "image": "/crew/sandy.jpg",
+        "description": "Sandy is a senior in a small school in California that is delighted to be part of an organization dedicated towards empowering voices of youth in means of oceanic awareness and conservation. This is her first time working with ocean related organizations and she is eager to learn more about her and her team's contributions in protecting marine ecosystems as she goes!"
+      }
+    ]
+  },
+  {
+    "department": "Content & Media Department",
+    "people": [
+      {
+        "name": "Poe Sid",
+        "role": "Editorial Director",
+        "pronouns": "They/Them",
+        "image": "/crew/poe.jpg",
+        "description": "Poe is a high school junior in New York passionate about environmental conservation and advocacy. They are a SEA Education Association alumni, creative writer, and animal-lover. They look forward to contributing to YOI's mission of ocean advocacy and education."
+      },
+      {
+        "name": "Chloe Gao",
+        "role": "Editorial Director",
+        "pronouns": "She/Her",
+        "image": "/crew/chloe.jpg",
+        "description": "Chloe is a senior from New York City who's hoping to create a change in the world and the community, which YOI is a part of her journey to achieve this dream. With her passion for the deep seas and its mysteries, she's looking forward to spreading YOI's mission and learning more about what she can do for the ocean!"
+      },
+      {
+        "name": "Jia Wen Lin",
+        "role": "Visual Design Director",
+        "pronouns": "She/Her",
+        "image": "/crew/jiawen.jpg",
+        "description": "Jia Wen is a high school senior in New York City who's interested in learning about marine science and advocacy. Her involvement in the Oceanic Club at her school has inspired her to continue working with other ocean related organizations such as the YOI. She hopes to learn more about the ocean, its inhabitants, and how to protect them."
+      },
+      {
+        "name": "Isabella Zhao",
+        "role": "Visual Design Director",
+        "pronouns": "She/Her",
+        "image": "/crew/isabella.jpg",
+        "description": "Isabella is an upcoming high school junior in New York who is interested in expanding her knowledge on marine life and the environmental issues that are affecting our oceans. She is excited to be a part of YOI to help promote and advocate for our oceans."
+      },
+      {
+        "name": "Jaylee Mui",
+        "role": "Visual Design Director",
+        "pronouns": "She/Her",
+        "image": "/crew/jaylee.jpg",
+        "description": "Jaylee is a soon-to-be senior who, through artistic means, hopes to raise awareness for environmental issues and the destruction of habitats. After seeing the harmful effects big corporations have on marine life, she has committed her time to YOI to help protect Earth's aquatic life. Through YOI, Jaylee hopes to expand her knowledge of marine advocacy and also meet new people who share common interests and goals with her."
+      },
+      {
+        "name": "Sunny Talusan",
+        "role": "Visual Design Director",
+        "pronouns": "They/Them",
+        "image": "/crew/sunny.jpg",
+        "description": "Sunny is a rising high school senior in New York who is passionate about our world's aquatic and marine life. Although they do not have much experience in ocean advocacy, they hope to channel their love for the ocean and its mysteries into meaningful change with YOI. They are excited to contribute to and be a part of the YOI team."
+      },
+      {
+        "name": "Joann Zheng",
+        "role": "Visual Design Director",
+        "pronouns": "She/Her",
+        "image": "/crew/joann.jpg",
+        "description": "Joann is a rising high school senior in New York who is also passionate about art and has an eagerness to protect the ocean and its creatures. While she doesn't have much experience with environmental advocacy, she hopes to combine her passions through YOI to broaden her impact. She is excited to be part of YOI and contribute to solving some of today's biggest ocean challenges."
+      },
+      {
+        "name": "Arham Tajwar",
+        "role": "Film Director",
+        "pronouns": "He/Him",
+        "image": "/crew/arham.jpg",
+        "description": "Arham Tajwar, a high school junior based in New York City. From a young age possessing a deep fondness towards animals and the sea hopes to express this passion through YOI, with YOI, he hopes to make a change, not just for deep seas but for the world as a whole. Advocacy has been with him for a couple years, expressing his passion through the organization he's part of, and he hopes YOI helps him spread to different areas of advocacy."
+      },
+      {
+        "name": "Sumya Zahin",
+        "role": "Game Developer",
+        "pronouns": "She/Her",
+        "image": "/crew/sumya.jpg",
+        "description": "Sumya is a rising high school senior based in New York who's excited to be a part of YOI and to help further it's mission via an interactive game that would combine her passion of coding and YOI's objective to advocate and protect marine life. She's excited to broaden her knowledge about marine life and everything being done to protect it through her time at YOI."
+      }
+    ]
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": 1,
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-73.9767351, 40.6890878] },
+      "properties": {
+        "title": "Brooklyn Tech YOI",
+        "description": "Brooklyn's YOI Chapter at Brooklyn Technical High School. Also the birthplace of the YOI.",
+        "instagram": "bths.yoi",
+        "email": "bths.oceanic@gmail.com",
+        "marker-color": "#23BAD2"
+      }
+    },
+    {
+      "id": 3,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-117.8064609, 33.6783988]
+      },
+      "properties": {
+        "title": "Woodbridge YOI",
+        "description": "Woodbridge's YOI Chapter at Woodbridge High School.",
+        "instagram": "whs.yoi",
+        "email": "woodbridge.yoi@gmail.com"
+      }
+    },
+    {
+      "id": 2,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-117.1887263, 32.9592647]
+      },
+      "properties": {
+        "title": "Canyon Crest YOI",
+        "description": "Canyon Crest's YOI Chapter at Canyon Crest Academy.",
+        "instagram": "cca.yoi",
+        "email": "canyoncrestacademy.yoi@gmail.com"
+      }
+    },
+    {
+      "id": 4,
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-73.9334062, 40.7943018] },
+      "properties": {
+        "title": "MCSM YOI",
+        "description": "MCSM's YOI Chapter at the Manhattan Center for Science and Mathematics.",
+        "instagram": "mcsm.yoi",
+        "email": "mcsmyoi24.25@gmail.com"
+      }
+    },
+    {
+      "id": 5,
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-73.7406394, 40.8000573] },
+      "properties": {
+        "title": "Great Neck North YOI",
+        "description": "Great Neck North's YOI Chapter at John L. Miller North High School.",
+        "instagram": "gnn.yoi",
+        "email": "gnnhsyoi@gmail.com"
+      }
+    },
+    {
+      "id": 6,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-117.8242338, 33.6512722]
+      },
+      "properties": {
+        "title": "University High School YOI",
+        "description": "University High's YOI Chapter at University High School.",
+        "instagram": "uhs.yoi",
+        "email": "uhs.yoi@gmail.com"
+      }
+    },
+    {
+      "id": 7,
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [36.1041168, 32.19658] },
+      "properties": {
+        "title": "Znaya YOI",
+        "description": "Znaya's YOI Chapter at the Znaya Secondary School for Girls.",
+        "instagram": "zghs.yoi",
+        "email": "zhsfg@gmail.com"
+      }
+    }
+  ]
+}
