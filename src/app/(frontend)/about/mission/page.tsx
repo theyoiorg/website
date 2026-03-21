@@ -12,7 +12,7 @@ export default function Home() {
           description="YOI aims to provide young individuals from all around the globe, regardless of their background, with opportunities to expand their knowledge, gain experience in youth-led advocacy, access resources, and collaborate with others in all fields relating to our ocean."
         />
         <section className="items-center justify-between px-5 py-10 pb-20 lg:px-10">
-          <h1 className="text-center text-3xl font-bold sm:text-4xl xl:text-4xl/none">
+          <h1 className="text-center text-3xl font-medium sm:text-4xl xl:text-4xl/none">
             Our Principles
           </h1>
           <div className="px-auto flex flex-col gap-20 pt-12 sm:flex-row sm:px-60">
@@ -46,7 +46,7 @@ function MissionStatement({
       <div className="flex h-24 w-24 items-center justify-center rounded-full bg-yoi-blue-4">
         <IconComponent className="size-14 fill-yoi-white" />
       </div>
-      <h2 className="pt-2 text-2xl font-bold sm:text-3xl">{title}</h2>
+      <h2 className="pt-2 text-2xl font-medium sm:text-3xl">{title}</h2>
       <p className="pt-5 text-lg">{children}</p>
     </div>
   )

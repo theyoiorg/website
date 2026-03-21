@@ -57,7 +57,7 @@ export default function EventsPage() {
         />
         {activeEvent ? (
           <>
-            <h1 className="pt-12 text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            <h1 className="pt-12 text-center text-3xl font-medium tracking-tighter sm:text-4xl md:text-5xl">
               Current Events
             </h1>
             {headlineEvent(firstEvent)}
@@ -68,7 +68,7 @@ export default function EventsPage() {
             'pt-12': !activeEvent,
           })}
         >
-          <h1 className="text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h1 className="text-center text-3xl font-medium tracking-tighter sm:text-4xl md:text-5xl">
             Past Events
           </h1>
           {pastEventsGallery(restEvents)}

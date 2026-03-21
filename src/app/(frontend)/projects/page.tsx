@@ -12,7 +12,7 @@ export default function Home() {
           description="Our mission is to educate the public about ocean threats and empower today's youth through advocacy of existing and potential solutions."
         />
         <section className="w-full py-12 pt-24 sm:pt-12 md:py-24 lg:py-32">
-          <h1 className="-mt-12 pb-12 text-center text-3xl font-bold sm:text-4xl xl:text-4xl/none">
+          <h1 className="-mt-12 pb-12 text-center text-3xl font-medium sm:text-4xl xl:text-4xl/none">
             Our Projects
           </h1>
           <div className="container grid grid-cols-1 gap-6 px-4 md:grid-cols-2 md:px-6 lg:grid-cols-3">

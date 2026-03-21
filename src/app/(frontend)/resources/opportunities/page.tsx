@@ -24,7 +24,7 @@ export default function OpportunitiesPage() {
         />
         <div className="mx-auto grid grid-cols-1 gap-8 px-12 py-8 md:py-12 lg:grid-cols-[280px_1fr]">
           <div className="flex flex-col gap-4">
-            <h2 className="text-lg font-semibold">Search Options</h2>
+            <h2 className="text-lg font-medium">Search Options</h2>
             <Input
               className="w-full max-w-md rounded-md border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
               placeholder="Search opportunities..."

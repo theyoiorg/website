@@ -95,7 +95,7 @@ const TextSectionTitle = React.forwardRef<
     <h2
       ref={ref}
       className={cn(
-        "text-3xl font-bold tracking-tighter sm:text-5xl",
+        "text-3xl font-medium tracking-tighter sm:text-5xl",
         className,
       )}
       {...props}

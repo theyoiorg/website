@@ -1,13 +1,9 @@
 import React from "react";
 import {
-  Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Image from "next/image";
 
 type PersonMiniProps = {
   picture?: string;
@@ -24,35 +20,46 @@ const PersonMiniCard: React.FC<PersonMiniProps> = ({
   role,
   className,
 }) => {
-  // process name to extract initials
-  // null-check name
   const checkedName = name ?? "Person Name";
   const splitName = checkedName.split(" ");
-  const initials = `${splitName[0].charAt(0)}${splitName[1]?.charAt(0)}`;
+  const initials = `${splitName[0].charAt(0)}${splitName[1]?.charAt(0) ?? ""}`;
 
   return (
-    <Card
+    <div
       className={
-        "flex h-[11rem] grow border border-gray-200 pb-2 transition-all hover:scale-105 dark:border-gray-800" +
-        className
+        "flex h-[11rem] grow overflow-hidden rounded-lg border border-gray-200 transition-all hover:scale-105 dark:border-gray-800 " +
+        (className ?? "")
       }
     >
-      <Avatar className="aspect-square h-full w-auto overflow-hidden rounded-md">
-        <AvatarImage alt={name} src={picture ?? "/images/placeholder.png"} />
-        <AvatarFallback>{initials}</AvatarFallback>
-      </Avatar>
-      <div className="flex h-full flex-col justify-between text-left align-middle">
-        <CardHeader className="flex flex-col">
-          <CardTitle>{checkedName}</CardTitle>
+      {/* Photo — fills full left side, no gaps */}
+      <div className="relative aspect-square h-full flex-shrink-0 overflow-hidden bg-gray-100 dark:bg-gray-800">
+        {picture ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={picture}
+            alt={checkedName}
+            className="h-full w-full object-cover"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center text-xl font-medium text-gray-500">
+            {initials}
+          </div>
+        )}
+      </div>
+
+      {/* Text */}
+      <div className="flex min-w-0 flex-1 flex-col justify-between text-left">
+        <CardHeader className="flex flex-col pb-2">
+          <CardTitle className="truncate">{checkedName}</CardTitle>
           <CardDescription>({pronouns})</CardDescription>
         </CardHeader>
-        <CardContent>
+        <div className="px-6 pb-4">
           <CardTitle className="text-gray-500 dark:text-gray-400">
             {role}
           </CardTitle>
-        </CardContent>
+        </div>
       </div>
-    </Card>
+    </div>
   );
 };
 

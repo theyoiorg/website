@@ -17,7 +17,7 @@ export default function Home() {
           description="To commemorate World Ocean Day 2024, we organized a contest inviting young individuals to contribute their artistic or literary creations. A selection of these submissions was then curated into a zine."
         />
         <section className="w-[100dvw] py-12 pt-24 md:py-32 lg:py-32">
-          <h1 className="-mt-12 pb-12 text-center text-3xl font-bold sm:text-4xl xl:text-4xl/none">
+          <h1 className="-mt-12 pb-12 text-center text-3xl font-medium sm:text-4xl xl:text-4xl/none">
             Thank you to all the participants!
           </h1>
           <p className="mx-auto max-w-[600px] text-center text-gray-800 dark:text-gray-400">
@@ -73,7 +73,7 @@ export default function Home() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <h1 className="-mt-12 pb-12 text-center text-3xl font-bold sm:text-4xl xl:text-4xl/none">
+          <h1 className="-mt-12 pb-12 text-center text-3xl font-medium sm:text-4xl xl:text-4xl/none">
             Final Zine
           </h1>
           <PDF className="h-[90svh] w-screen sm:mx-auto sm:w-[90svw]" />

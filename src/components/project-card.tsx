@@ -40,7 +40,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         width={400}
       />
       <div className="bg-white p-4 dark:bg-gray-950">
-        <h3 className="text-lg font-semibold">{title}</h3>
+        <h3 className="text-lg font-medium">{title}</h3>
         <p className="text-sm text-gray-500 dark:text-gray-400">
           {description}
         </p>

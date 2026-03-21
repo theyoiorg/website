@@ -81,7 +81,7 @@ function TeamSection() {
     <section className="w-full py-12 md:py-24 lg:py-32">
       <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
         <div className="space-y-3">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Team</h2>
+          <h2 className="text-3xl font-medium tracking-tighter sm:text-4xl md:text-5xl">Our Team</h2>
           <p className="mx-auto max-w-[75%] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Our team is composed of a diverse group of students all passionate about the ocean.
           </p>
@@ -127,7 +127,7 @@ function MainNewsletterSection() {
     <section className="w-full border-t py-12 md:py-24 lg:py-32">
       <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
         <div className="space-y-3">
-          <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Stay Connected</h2>
+          <h2 className="text-3xl font-medium tracking-tighter md:text-4xl/tight">Stay Connected</h2>
           <p className="mx-auto max-w-[75%] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Sign up for our monthly newsletter, <em>The Maritime Logs</em>, to stay up-to-date on
             our latest initiatives and events.

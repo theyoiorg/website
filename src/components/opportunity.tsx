@@ -61,7 +61,7 @@ const OpportunityCard: React.FC<OpportunityProps> = ({
   return (
     <Card className={`flex h-full flex-col ${className}`}>
       <CardHeader className="grow-0">
-        <CardTitle className="h-16 overflow-hidden align-text-bottom text-2xl font-bold">
+        <CardTitle className="h-16 overflow-hidden align-text-bottom text-2xl font-medium">
           {data.title}
         </CardTitle>
         <div className="flex items-center space-x-4">

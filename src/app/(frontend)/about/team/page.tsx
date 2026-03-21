@@ -25,7 +25,7 @@ export default function Home() {
           description="Our mission is to educate the public about ocean threats and empower today's youth through advocacy of existing and potential solutions."
         />
         <section className="w-screen items-center justify-between px-5 py-10 pb-20 lg:px-10">
-          <h1 className="text-center text-3xl font-bold sm:text-4xl xl:text-4xl/none">
+          <h1 className="text-center text-3xl font-medium sm:text-4xl xl:text-4xl/none">
             Meet Our Team
           </h1>
           <Accordion

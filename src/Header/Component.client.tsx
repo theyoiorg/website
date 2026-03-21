@@ -30,7 +30,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
   }, [headerTheme])
 
   return (
-    <div className="relative z-20" {...(theme ? { 'data-theme': theme } : {})}>
+    <div className="absolute z-20 w-full" {...(theme ? { 'data-theme': theme } : {})}>
       <HeaderNav data={data} />
     </div>
   )
