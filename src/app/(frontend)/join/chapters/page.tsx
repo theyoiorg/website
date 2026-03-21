@@ -78,7 +78,7 @@ export default function Home() {
   }, [zoom])
 
   return (
-    <div className="flex w-full flex-col bg-background">
+    <div className="flex w-full flex-col bg-yoi-white dark:bg-yoi-black">
       <main className="z-1 flex flex-col">
         <section className="h-screen w-full pb-12 md:pb-24 lg:pb-32">
           <div id="map-container" className="h-screen w-full" />

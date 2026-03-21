@@ -30,7 +30,7 @@ const TextSection = React.forwardRef<
   return (
     <section
       className={
-        "w-full bg-background py-12 md:py-24 lg:py-24"
+        "w-full bg-yoi-white py-12 dark:bg-yoi-black md:py-24 lg:py-24"
       }
       ref={ref}
       {...props}

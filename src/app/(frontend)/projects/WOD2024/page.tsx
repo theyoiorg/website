@@ -8,7 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 export default function Home() {
   return (
-    <div className="flex w-full flex-col bg-background">
+    <div className="flex w-full flex-col bg-yoi-white dark:bg-yoi-black">
       <main className="z-1 flex-1">
         <Banner
           bg="/heroes/sea mines - Kevin Lin.png"

@@ -46,7 +46,7 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
   return (
     <header
       className={
-        'flex w-screen items-center bg-gradient-to-b from-yoi-header-from from-30% to-transparent to-75% px-4 py-4 pb-8 lg:px-6' +
+        'flex w-screen items-center bg-gradient-to-b from-yoi-blue-4 dark:from-yoi-blue-1 from-30% to-transparent to-75% px-4 py-4 pb-8 lg:px-6' +
         (className ? ' ' + className : '')
       }
     >

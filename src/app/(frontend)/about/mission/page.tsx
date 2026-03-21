@@ -3,7 +3,7 @@ import 'material-icons/iconfont/round.css'
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-between bg-background">
+    <div className="flex min-h-screen w-full flex-col items-center justify-between bg-yoi-white dark:bg-yoi-black">
       <main className="z-1 flex-1">
         <Banner
           bg="/heroes/shaun-low-v8Un2Roo1Ak-unsplash.jpg"

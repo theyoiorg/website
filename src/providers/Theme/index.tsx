@@ -20,16 +20,27 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     canUseDOM ? (document.documentElement.getAttribute('data-theme') as Theme) : undefined,
   )
 
+  const applyTheme = (t: string) => {
+    document.documentElement.setAttribute('data-theme', t)
+    if (t === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
+
   const setTheme = useCallback((themeToSet: Theme | null) => {
     if (themeToSet === null) {
       window.localStorage.removeItem(themeLocalStorageKey)
       const implicitPreference = getImplicitPreference()
-      document.documentElement.setAttribute('data-theme', implicitPreference || '')
-      if (implicitPreference) setThemeState(implicitPreference)
+      if (implicitPreference) {
+        applyTheme(implicitPreference)
+        setThemeState(implicitPreference)
+      }
     } else {
       setThemeState(themeToSet)
       window.localStorage.setItem(themeLocalStorageKey, themeToSet)
-      document.documentElement.setAttribute('data-theme', themeToSet)
+      applyTheme(themeToSet)
     }
   }, [])
 
@@ -41,13 +52,12 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
       themeToSet = preference
     } else {
       const implicitPreference = getImplicitPreference()
-
       if (implicitPreference) {
         themeToSet = implicitPreference
       }
     }
 
-    document.documentElement.setAttribute('data-theme', themeToSet)
+    applyTheme(themeToSet)
     setThemeState(themeToSet)
   }, [])
 

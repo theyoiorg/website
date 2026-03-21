@@ -59,7 +59,7 @@ const BannerDesktop: React.FC<BannerDesktopProps> = ({
             quality={90}
             priority={true}
           />
-          <div className="absolute inset-0 flex w-3/4 flex-col justify-center space-y-4 bg-gradient-to-r from-yoi-header-from from-40% to-transparent pl-[5%] pr-8  2xl:w-1/2">
+          <div className="absolute inset-0 flex w-3/4 flex-col justify-center space-y-4 bg-gradient-to-r from-yoi-blue-4 dark:from-yoi-blue-1 from-40% to-transparent pl-[5%] pr-8  2xl:w-1/2">
             <div
               className={"w-3/4 space-y-2 drop-shadow-xl xl:w-2/3 " + pad_top}
             >

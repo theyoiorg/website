@@ -15,7 +15,7 @@ import opportunities from './opportunity_db_2.json'
 
 export default function OpportunitiesPage() {
   return (
-    <main className="flex w-full flex-col bg-background">
+    <main className="flex w-full flex-col bg-yoi-white dark:bg-yoi-black">
       <section className="z-1 flex-1">
         <Banner
           bg="/projects/ocg-saving-the-ocean-xch7jXAaqqo-unsplash.jpg"

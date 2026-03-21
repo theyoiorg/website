@@ -47,7 +47,7 @@ export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
   return (
     <>
       {/* Desktop Navbar */}
-      <header className="hidden items-center bg-gradient-to-b from-yoi-header-from from-50% to-transparent px-4 py-4 pb-8 md:flex lg:px-6">
+      <header className="hidden items-center bg-gradient-to-b from-yoi-blue-4 dark:from-yoi-blue-1 from-50% to-transparent px-4 py-4 pb-8 md:flex lg:px-6">
         <Link className="flex flex-none items-center justify-center gap-1" href="/">
           <div className="pr-4">
             <Image src="/yoi_logo.png" alt="YOI Logo" width={75} height={75} />
