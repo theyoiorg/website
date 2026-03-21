@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import config from '@payload-config'
 import { getPayload } from 'payload'
 import Banner from '@/components/banners/banner'
