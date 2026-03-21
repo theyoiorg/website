@@ -1,3 +1,5 @@
+import config from '@payload-config'
+import { getPayload } from 'payload'
 import Banner from '@/components/banners/banner'
 import PersonCard from '@/components/person'
 import {
@@ -13,9 +15,22 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import data from '../yoi-execs.json'
 
-export default function Home() {
+export default async function Home() {
+  const payload = await getPayload({ config })
+  const result = await payload.find({ collection: 'team-members', limit: 1000 })
+
+  const departments: Record<string, { order: number; people: typeof result.docs }> = {}
+  for (const member of result.docs) {
+    const dept = member.department
+    if (!departments[dept]) {
+      departments[dept] = { order: member.departmentOrder ?? 0, people: [] }
+    }
+    departments[dept].people.push(member)
+  }
+
+  const sortedDepts = Object.entries(departments).sort(([, a], [, b]) => a.order - b.order)
+
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-between bg-yoi-white dark:bg-yoi-black">
       <main className="z-1 flex-1">
@@ -31,27 +46,27 @@ export default function Home() {
           <Accordion
             type="multiple"
             className="w-full"
-            defaultValue={data.map((department) => department.department)}
+            defaultValue={sortedDepts.map(([dept]) => dept)}
           >
-            {data.map((department, index) => (
-              <AccordionItem value={department.department} key={index}>
+            {sortedDepts.map(([dept, { people }], index) => (
+              <AccordionItem value={dept} key={index}>
                 <AccordionTrigger className="text-2xl">
-                  <div className="pl-4">{department.department}</div>
+                  <div className="pl-4">{dept}</div>
                 </AccordionTrigger>
                 <AccordionContent className="px-12 lg:px-14">
                   <Carousel>
                     <CarouselContent className="flex">
-                      {department.people.map((person, i) => (
+                      {people.map((person, i) => (
                         <CarouselItem
                           key={i}
                           className="flex space-y-2 md:basis-1/2 lg:basis-1/3 2xl:basis-1/4"
                         >
                           <PersonCard
-                            picture={person.image}
+                            picture={person.image ?? ''}
                             name={person.name}
-                            pronouns={person.pronouns}
+                            pronouns={person.pronouns ?? ''}
                             role={person.role}
-                            description={person.description}
+                            description={person.description ?? ''}
                             className="basis-1/2 space-y-2 lg:basis-1/3 2xl:basis-1/4"
                           />
                         </CarouselItem>

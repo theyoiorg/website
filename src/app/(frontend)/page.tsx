@@ -1,3 +1,5 @@
+import config from '@payload-config'
+import { getPayload } from 'payload'
 import Banner from '@/components/banners/banner'
 import {
   TextSection,
@@ -27,20 +29,8 @@ import {
   DrawerTrigger,
 } from '@/components/ui/drawer'
 import Link from 'next/link'
-import data from './about/yoi-execs.json'
 
-type ExecsJSON = {
-  department: string
-  people: {
-    name: string
-    role: string
-    pronouns: string
-    image: string
-    description: string
-  }[]
-}[]
-
-export default function HomePage() {
+export default async function HomePage() {
   return (
     <div className="flex w-full flex-col">
       <main className="flex-1 flex-col">
@@ -74,8 +64,19 @@ export default function HomePage() {
   )
 }
 
-function TeamSection() {
-  const execData = data as ExecsJSON
+async function TeamSection() {
+  const payload = await getPayload({ config })
+  const result = await payload.find({ collection: 'team-members', limit: 1000 })
+
+  const departments: Record<string, { order: number; people: typeof result.docs }> = {}
+  for (const member of result.docs) {
+    const dept = member.department
+    if (!departments[dept]) {
+      departments[dept] = { order: member.departmentOrder ?? 0, people: [] }
+    }
+    departments[dept].people.push(member)
+  }
+  const sortedDepts = Object.entries(departments).sort(([, a], [, b]) => a.order - b.order)
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
@@ -88,23 +89,23 @@ function TeamSection() {
         </div>
         <Accordion
           type="multiple"
-          defaultValue={execData.map((department) => department.department)}
+          defaultValue={sortedDepts.map(([dept]) => dept)}
         >
-          {execData.map((department, index) => (
-            <AccordionItem value={department.department} key={index}>
+          {sortedDepts.map(([dept, { people }], index) => (
+            <AccordionItem value={dept} key={index}>
               <AccordionTrigger className="text-2xl">
-                <div className="pl-4">{department.department}</div>
+                <div className="pl-4">{dept}</div>
               </AccordionTrigger>
               <AccordionContent className="max-w-[99vw] justify-center lg:w-[75vw]">
                 <div className="flex justify-center">
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-2 2xl:grid-cols-3">
-                    {department.people.map((person, i) => (
+                    {people.map((person, i) => (
                       <div key={i} className="flex">
                         <PersonMiniCard
                           name={person.name}
-                          pronouns={person.pronouns}
+                          pronouns={person.pronouns ?? ''}
                           role={person.role}
-                          picture={person.image}
+                          picture={person.image ?? ''}
                         />
                       </div>
                     ))}

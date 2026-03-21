@@ -1,3 +1,5 @@
+import config from '@payload-config'
+import { getPayload } from 'payload'
 import Banner from '@/components/banners/banner'
 import {
   TextSection,
@@ -7,9 +9,12 @@ import {
   TextSectionImage,
   TextSectionTitle,
 } from '@/components/text-section'
-import joinOptions from './join-options.json'
 
-export default function Home() {
+export default async function Home() {
+  const payload = await getPayload({ config })
+  const joinOptionsGlobal = await payload.findGlobal({ slug: 'join-options' })
+  const joinOptions = joinOptionsGlobal.options ?? []
+
   return (
     <div className="flex w-full flex-col bg-yoi-white dark:bg-yoi-black">
       <main className="z-1 flex-1">
@@ -20,13 +25,13 @@ export default function Home() {
         />
         <section className="w-full pb-12 md:pb-24 lg:pb-32">
           {joinOptions.map((option) => (
-            <TextSection key={option.title} imageLeft={option.imageLeft}>
+            <TextSection key={option.title ?? ''} imageLeft={option.imageLeft ?? false}>
               <TextSectionContent>
-                <TextSectionTitle>{option.title}</TextSectionTitle>
-                <TextSectionDescription>{option.description}</TextSectionDescription>
-                <TextSectionButton href={option.link}>Learn More</TextSectionButton>
+                <TextSectionTitle>{option.title ?? ''}</TextSectionTitle>
+                <TextSectionDescription>{option.description ?? ''}</TextSectionDescription>
+                <TextSectionButton href={option.link ?? ''}>Learn More</TextSectionButton>
               </TextSectionContent>
-              <TextSectionImage src={option.image} alt={option.title} />
+              <TextSectionImage src={option.image ?? ''} alt={option.title ?? ''} />
             </TextSection>
           ))}
         </section>

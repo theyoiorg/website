@@ -1,8 +1,13 @@
+import config from '@payload-config'
+import { getPayload } from 'payload'
 import Banner from '@/components/banners/banner'
 import ProjectCard from '@/components/project-card'
-import projects from './projects.json'
 
-export default function Home() {
+export default async function Home() {
+  const payload = await getPayload({ config })
+  const result = await payload.find({ collection: 'projects', limit: 1000, sort: 'order' })
+  const projects = result.docs
+
   return (
     <div className="flex w-full flex-col bg-yoi-white dark:bg-yoi-black">
       <main className="z-1 flex-1">
@@ -20,9 +25,9 @@ export default function Home() {
               <ProjectCard
                 key={index}
                 title={e.title}
-                description={e.description}
-                image={e.image}
-                link={e.link}
+                description={e.description ?? ''}
+                image={e.image ?? ''}
+                link={e.link ?? ''}
               />
             ))}
           </div>

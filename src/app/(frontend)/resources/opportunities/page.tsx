@@ -1,3 +1,5 @@
+import config from '@payload-config'
+import { getPayload } from 'payload'
 import Banner from '@/components/banners/banner'
 import OpportunityCard, { OpportunityInfo } from '@/components/opportunity'
 import {
@@ -11,9 +13,33 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Slider } from '@/components/ui/range-slider'
-import opportunities from './opportunity_db_2.json'
 
-export default function OpportunitiesPage() {
+export default async function OpportunitiesPage() {
+  const payload = await getPayload({ config })
+  const result = await payload.find({ collection: 'opportunities', limit: 1000 })
+
+  const opportunities: OpportunityInfo[] = result.docs.map((opp) => ({
+    title: opp.title,
+    posted: opp.posted ?? '',
+    deadline: opp.deadline ?? '',
+    location: opp.location ?? '',
+    description: opp.description ?? '',
+    provider: {
+      name: opp.providerName ?? '',
+      image: '/hetllo.png',
+      url: opp.providerUrl ?? '',
+    },
+    link: opp.link ?? '',
+    availability: {
+      allAges: true,
+      min: 0,
+      max: 25,
+      open: opp.open ?? true,
+    },
+    tags: (opp.tags ?? []).map((t: { tag?: string | null }) => t.tag ?? '').filter(Boolean),
+    requirements: (opp.requirements ?? []).map((r: { requirement?: string | null }) => r.requirement ?? '').filter(Boolean),
+  }))
+
   return (
     <main className="flex w-full flex-col bg-yoi-white dark:bg-yoi-black">
       <section className="z-1 flex-1">
@@ -95,7 +121,7 @@ export default function OpportunitiesPage() {
             </Accordion>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 2xl:grid-cols-4">
-            {(opportunities as unknown as OpportunityInfo[]).map((item, index) => (
+            {opportunities.map((item, index) => (
               <OpportunityCard key={index} opportunityData={item} className="" />
             ))}
           </div>

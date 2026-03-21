@@ -1,3 +1,5 @@
+import config from '@payload-config'
+import { getPayload } from 'payload'
 import Banner from '@/components/banners/banner'
 import {
   TextSection,
@@ -17,7 +19,6 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 import Image from 'next/image'
-import pastEvents from './past_events.json'
 import { cn } from '@/utilities/ui'
 
 type Event = {
@@ -31,12 +32,17 @@ type Event = {
   buttonText?: string
 }
 
-export default function EventsPage() {
-  const [firstEvent, ...restEvents] = pastEvents as Event[]
-  let activeEvent = true
-  if (Object.values(firstEvent).every((value) => value === '')) {
-    activeEvent = false
+export default async function EventsPage() {
+  const payload = await getPayload({ config })
+  const result = await payload.find({ collection: 'events', limit: 1000 })
+  const allEvents = result.docs as unknown as Event[]
+
+  const [firstEvent, ...restEvents] = allEvents
+  let activeEvent = false
+  if (firstEvent && Object.values(firstEvent).some((v) => v !== '')) {
+    activeEvent = true
   }
+
   restEvents.forEach((event) => {
     event.date = event.date ?? 'Invalid Date'
     event.location = event.location ?? 'Unknown Location'
@@ -55,7 +61,7 @@ export default function EventsPage() {
           title="YOI Events"
           description="We hold a variety of events throughout the year. Check out what events we're currently running or have run in the past!"
         />
-        {activeEvent ? (
+        {activeEvent && firstEvent ? (
           <>
             <h1 className="pt-12 text-center text-3xl font-medium tracking-tighter sm:text-4xl md:text-5xl">
               Current Events

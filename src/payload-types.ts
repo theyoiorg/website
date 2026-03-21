@@ -72,6 +72,11 @@ export interface Config {
     media: Media;
     categories: Category;
     users: User;
+    'team-members': TeamMember;
+    projects: Project;
+    events: Event;
+    opportunities: Opportunity;
+    chapters: Chapter;
     redirects: Redirect;
     forms: Form;
     'form-submissions': FormSubmission;
@@ -94,6 +99,11 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
+    'team-members': TeamMembersSelect<false> | TeamMembersSelect<true>;
+    projects: ProjectsSelect<false> | ProjectsSelect<true>;
+    events: EventsSelect<false> | EventsSelect<true>;
+    opportunities: OpportunitiesSelect<false> | OpportunitiesSelect<true>;
+    chapters: ChaptersSelect<false> | ChaptersSelect<true>;
     redirects: RedirectsSelect<false> | RedirectsSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
@@ -112,10 +122,12 @@ export interface Config {
   globals: {
     header: Header;
     footer: Footer;
+    'join-options': JoinOption;
   };
   globalsSelect: {
     header: HeaderSelect<false> | HeaderSelect<true>;
     footer: FooterSelect<false> | FooterSelect<true>;
+    'join-options': JoinOptionsSelect<false> | JoinOptionsSelect<true>;
   };
   locale: null;
   widgets: {
@@ -783,6 +795,105 @@ export interface Form {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "team-members".
+ */
+export interface TeamMember {
+  id: number;
+  name: string;
+  role: string;
+  pronouns?: string | null;
+  department: string;
+  departmentOrder?: number | null;
+  image?: string | null;
+  description?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects".
+ */
+export interface Project {
+  id: number;
+  title: string;
+  description?: string | null;
+  image?: string | null;
+  link?: string | null;
+  type?: ('zine' | 'petition' | 'newsletter' | 'other') | null;
+  status?: ('active' | 'completed') | null;
+  tags?:
+    | {
+        tag?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  order?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "events".
+ */
+export interface Event {
+  id: number;
+  title: string;
+  description?: string | null;
+  image?: string | null;
+  location?: string | null;
+  date?: string | null;
+  link?: string | null;
+  buttonText?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "opportunities".
+ */
+export interface Opportunity {
+  id: number;
+  title: string;
+  posted?: string | null;
+  deadline?: string | null;
+  location?: string | null;
+  description?: string | null;
+  providerName?: string | null;
+  providerUrl?: string | null;
+  link?: string | null;
+  tags?:
+    | {
+        tag?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  requirements?:
+    | {
+        requirement?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  open?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "chapters".
+ */
+export interface Chapter {
+  id: number;
+  title: string;
+  description?: string | null;
+  instagram?: string | null;
+  email?: string | null;
+  longitude?: number | null;
+  latitude?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects".
  */
 export interface Redirect {
@@ -990,6 +1101,26 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'users';
         value: number | User;
+      } | null)
+    | ({
+        relationTo: 'team-members';
+        value: number | TeamMember;
+      } | null)
+    | ({
+        relationTo: 'projects';
+        value: number | Project;
+      } | null)
+    | ({
+        relationTo: 'events';
+        value: number | Event;
+      } | null)
+    | ({
+        relationTo: 'opportunities';
+        value: number | Opportunity;
+      } | null)
+    | ({
+        relationTo: 'chapters';
+        value: number | Chapter;
       } | null)
     | ({
         relationTo: 'redirects';
@@ -1358,6 +1489,100 @@ export interface UsersSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "team-members_select".
+ */
+export interface TeamMembersSelect<T extends boolean = true> {
+  name?: T;
+  role?: T;
+  pronouns?: T;
+  department?: T;
+  departmentOrder?: T;
+  image?: T;
+  description?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects_select".
+ */
+export interface ProjectsSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  image?: T;
+  link?: T;
+  type?: T;
+  status?: T;
+  tags?:
+    | T
+    | {
+        tag?: T;
+        id?: T;
+      };
+  order?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "events_select".
+ */
+export interface EventsSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  image?: T;
+  location?: T;
+  date?: T;
+  link?: T;
+  buttonText?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "opportunities_select".
+ */
+export interface OpportunitiesSelect<T extends boolean = true> {
+  title?: T;
+  posted?: T;
+  deadline?: T;
+  location?: T;
+  description?: T;
+  providerName?: T;
+  providerUrl?: T;
+  link?: T;
+  tags?:
+    | T
+    | {
+        tag?: T;
+        id?: T;
+      };
+  requirements?:
+    | T
+    | {
+        requirement?: T;
+        id?: T;
+      };
+  open?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "chapters_select".
+ */
+export interface ChaptersSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  instagram?: T;
+  email?: T;
+  longitude?: T;
+  latitude?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects_select".
  */
 export interface RedirectsSelect<T extends boolean = true> {
@@ -1691,6 +1916,25 @@ export interface Footer {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "join-options".
+ */
+export interface JoinOption {
+  id: number;
+  options?:
+    | {
+        title?: string | null;
+        description?: string | null;
+        link?: string | null;
+        image?: string | null;
+        imageLeft?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "header_select".
  */
 export interface HeaderSelect<T extends boolean = true> {
@@ -1729,6 +1973,25 @@ export interface FooterSelect<T extends boolean = true> {
               url?: T;
               label?: T;
             };
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "join-options_select".
+ */
+export interface JoinOptionsSelect<T extends boolean = true> {
+  options?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        link?: T;
+        image?: T;
+        imageLeft?: T;
         id?: T;
       };
   updatedAt?: T;

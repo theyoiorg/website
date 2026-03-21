@@ -6,12 +6,18 @@ import { buildConfig, PayloadRequest } from 'payload'
 import { fileURLToPath } from 'url'
 
 import { Categories } from './collections/Categories'
+import { Chapters } from './collections/Chapters'
+import { Events } from './collections/Events'
 import { Media } from './collections/Media'
+import { Opportunities } from './collections/Opportunities'
 import { Pages } from './collections/Pages'
 import { Posts } from './collections/Posts'
+import { Projects } from './collections/Projects'
+import { TeamMembers } from './collections/TeamMembers'
 import { Users } from './collections/Users'
 import { Footer } from './Footer/config'
 import { Header } from './Header/config'
+import { JoinOptions } from './globals/JoinOptions'
 import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
@@ -63,9 +69,9 @@ export default buildConfig({
       connectionString: process.env.DATABASE_URL || '',
     },
   }),
-  collections: [Pages, Posts, Media, Categories, Users],
+  collections: [Pages, Posts, Media, Categories, Users, TeamMembers, Projects, Events, Opportunities, Chapters],
   cors: [getServerSideURL()].filter(Boolean),
-  globals: [Header, Footer],
+  globals: [Header, Footer, JoinOptions],
   plugins: [
     ...plugins,
     vercelBlobStorage({
