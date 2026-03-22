@@ -21,6 +21,12 @@ export const Users: CollectionConfig = {
       name: 'name',
       type: 'text',
     },
+    {
+      name: 'avatar',
+      type: 'upload',
+      relationTo: 'media',
+      label: 'Profile Picture',
+    },
   ],
   timestamps: true,
 }
