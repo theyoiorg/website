@@ -1,32 +1,48 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useAuth } from '@payloadcms/ui'
+import type { User } from '@/payload-types'
 
 export const AdminAvatar: React.FC = () => {
-  const { user } = useAuth()
+  const { user } = useAuth<User>()
+  const [avatarUrl, setAvatarUrl] = useState<string | null>(null)
 
-  const avatar = (user as any)?.avatar
-  const src = typeof avatar === 'object' && avatar?.url ? avatar.url : null
-  const name: string = (user as any)?.name || (user as any)?.email || 'U'
+  const name = user?.name || (user as any)?.email || ''
   const initials = name
     .split(' ')
     .map((w: string) => w[0])
     .join('')
     .toUpperCase()
-    .slice(0, 2)
+    .slice(0, 2) || '?'
 
-  if (src) {
+  useEffect(() => {
+    if (!user?.avatar) return
+
+    // If already populated (object with url)
+    if (typeof user.avatar === 'object' && 'url' in user.avatar && user.avatar.url) {
+      setAvatarUrl(user.avatar.url as string)
+      return
+    }
+
+    // If it's just an ID, fetch the media document
+    const id = typeof user.avatar === 'string' ? user.avatar : (user.avatar as any)?.id
+    if (!id) return
+
+    fetch(`/api/media/${id}?depth=0`)
+      .then((r) => r.json())
+      .then((doc) => {
+        if (doc?.url) setAvatarUrl(doc.url)
+      })
+      .catch(() => {})
+  }, [user?.avatar])
+
+  if (avatarUrl) {
     return (
       <img
-        src={src}
+        src={avatarUrl}
         alt={name}
-        style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          borderRadius: '50%',
-        }}
+        style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
       />
     )
   }
