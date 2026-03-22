@@ -37,29 +37,37 @@ export const AdminAvatar: React.FC = () => {
       .catch(() => {})
   }, [user?.avatar])
 
+  const style: React.CSSProperties = {
+    width: 32,
+    height: 32,
+    borderRadius: '50%',
+    overflow: 'hidden',
+    flexShrink: 0,
+  }
+
   if (avatarUrl) {
     return (
-      <img
-        src={avatarUrl}
-        alt={name}
-        style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
-      />
+      <div style={style}>
+        <img
+          src={avatarUrl}
+          alt={name}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      </div>
     )
   }
 
   return (
     <div
       style={{
-        width: '100%',
-        height: '100%',
-        borderRadius: '50%',
+        ...style,
         background: '#04328d',
         color: '#fff',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         fontWeight: 500,
-        fontSize: '0.8rem',
+        fontSize: '0.75rem',
       }}
     >
       {initials}
