@@ -13,16 +13,52 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { SheetTrigger, SheetClose, SheetContent, Sheet } from '@/components/ui/sheet'
-import {
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
-  NavigationMenuLink,
-  NavigationMenu,
-} from '@/components/ui/navigation-menu'
+import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu'
+import { ChevronDown } from 'lucide-react'
 import { cn } from '@/utilities/ui'
 import nav_items from './nav_items.json'
+
+// Sidebar-specific NavigationMenu — no Viewport (renders content inline, not in a floating panel)
+const SidebarNav = ({ children }: { children: React.ReactNode }) => (
+  <NavigationMenuPrimitive.Root orientation="vertical" className="w-full py-2">
+    <NavigationMenuPrimitive.List className="flex flex-col space-y-1 list-none m-0 p-0">
+      {children}
+    </NavigationMenuPrimitive.List>
+    {/* No <NavigationMenuViewport> — content renders inline */}
+  </NavigationMenuPrimitive.Root>
+)
+
+const SidebarNavItem = NavigationMenuPrimitive.Item
+
+const SidebarNavTrigger = React.forwardRef<
+  React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
+>(({ className, children, ...props }, ref) => (
+  <NavigationMenuPrimitive.Trigger
+    ref={ref}
+    className={cn(
+      'group flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10 focus:outline-none',
+      className,
+    )}
+    {...props}
+  >
+    {children}
+    <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" aria-hidden />
+  </NavigationMenuPrimitive.Trigger>
+))
+SidebarNavTrigger.displayName = 'SidebarNavTrigger'
+
+const SidebarNavContent = React.forwardRef<
+  React.ElementRef<typeof NavigationMenuPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
+>(({ className, ...props }, ref) => (
+  <NavigationMenuPrimitive.Content
+    ref={ref}
+    className={cn('pl-2 pb-1', className)}
+    {...props}
+  />
+))
+SidebarNavContent.displayName = 'SidebarNavContent'
 
 type NavCatLinks = {
   title: string
@@ -99,24 +135,29 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
               </Button>
             </SheetClose>
           </div>
-          <NavigationMenu orientation="vertical" className="w-full max-w-full items-start py-4">
-            <NavigationMenuList className="flex-col items-start gap-0 space-x-0 w-full">
-              {nav_items.map((item: NavCategory) => (
-                <NavigationMenuItem key={item.category} className="w-full">
-                  <NavigationMenuTrigger className="w-full justify-between">{item.category}</NavigationMenuTrigger>
-                  <NavigationMenuContent className="static left-auto top-auto w-full shadow-none">
-                    <ul className="grid w-full p-2">
-                      {item.links.map((link) => (
-                        <ListItem key={link.title} title={link.title} href={link.href}>
-                          {link.description}
-                        </ListItem>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+          <SidebarNav>
+            {nav_items.map((item: NavCategory) => (
+              <SidebarNavItem key={item.category}>
+                <SidebarNavTrigger>{item.category}</SidebarNavTrigger>
+                <SidebarNavContent>
+                  <ul className="flex flex-col gap-0.5 py-1">
+                    {item.links.map((link) => (
+                      <li key={link.title}>
+                        <SheetClose asChild>
+                          <Link
+                            href={link.href}
+                            className="block rounded-md px-3 py-1.5 text-sm text-gray-300 hover:bg-white/10 hover:text-white"
+                          >
+                            {link.title}
+                          </Link>
+                        </SheetClose>
+                      </li>
+                    ))}
+                  </ul>
+                </SidebarNavContent>
+              </SidebarNavItem>
+            ))}
+          </SidebarNav>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="default" className="w-full">
@@ -182,25 +223,4 @@ function XIcon(props: React.SVGProps<SVGSVGElement>) {
   )
 }
 
-const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
-  ({ className, title, children, ...props }, ref) => {
-    return (
-      <li>
-        <NavigationMenuLink asChild>
-          <a
-            ref={ref}
-            className={cn(
-              'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
-              className,
-            )}
-            {...props}
-          >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
-          </a>
-        </NavigationMenuLink>
-      </li>
-    )
-  },
-)
-ListItem.displayName = 'ListItem'
+
