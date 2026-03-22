@@ -99,13 +99,13 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
               </Button>
             </SheetClose>
           </div>
-          <NavigationMenu className="py-4">
-            <NavigationMenuList>
+          <NavigationMenu orientation="vertical" className="w-full max-w-full items-start py-4">
+            <NavigationMenuList className="flex-col items-start gap-0 space-x-0 w-full">
               {nav_items.map((item: NavCategory) => (
-                <NavigationMenuItem key={item.category}>
-                  <NavigationMenuTrigger>{item.category}</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="md:grid-rows grid w-full p-2">
+                <NavigationMenuItem key={item.category} className="w-full">
+                  <NavigationMenuTrigger className="w-full justify-between">{item.category}</NavigationMenuTrigger>
+                  <NavigationMenuContent className="static left-auto top-auto w-full shadow-none">
+                    <ul className="grid w-full p-2">
                       {item.links.map((link) => (
                         <ListItem key={link.title} title={link.title} href={link.href}>
                           {link.description}
